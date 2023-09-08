@@ -1,25 +1,25 @@
 #include <stdio.h>
 
 /**
- * * main - Entry point
- * *
- * * Description: print numbers of base16 in lowercase
- * *
- * * Return: 0 (End Program)
- * */
+* main - Entry point
+*
+* Description: print numbers of base16 in lowercase
+*
+* Return: 0 (End Program)
+*/
 
 int main(void)
 {
-		int digit = 48;
+	int digit = 48;
 
-			while (digit <= 102)
-					{
-								putchar(digit);
-										if (digit == 57)
-														digit += 39;
-												digit++;
-													}
-				putchar('\n');
+	while (digit <= 102)
+	{
+		putchar(digit);
+		if (digit == 57)
+			digit += 39;
+			digit++;
+	}
+	putchar('\n');
 
-					return (0);
+	return (0);
 }
