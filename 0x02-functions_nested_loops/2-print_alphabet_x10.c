@@ -7,11 +7,11 @@
 
 void print_alphabet_x10(void)
 {
-	int line, ch;
+	int l, ch;
 
-	for (line = 0; line <= 9; line++)
+	for (l = 0; l <= 9; l++)
 	{
-		for (ch 'a'; ch <= 'z'; ch++)
+		for (ch = 'a'; ch <= 'z'; ch++)
 			_putchar(ch);
 		_putchar('\n');
 	}
