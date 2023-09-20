@@ -2,28 +2,38 @@
 
 /**
  * leet - a function that encodes a string into 1337
- * @c: string input
- * Return: string that is ncoded
+ *
+ * @s: string input
+ *
+ * Return: @s
 */
 
-char *leet(char *c)
+char *leet(char *s)
 {
-	char *cp = c;
-	char key[] = {'A', 'E', 'O', 'T', 'L'};
-	int value[] = {4, 3, 0, 7, 1};
-	unsigned int i;
+	int i, c = 0;
+	int sl[] = {97, 101, 111, 116, 108};
+	int ul[] = {65, 69, 79, 84, 76};
+	int n[] = {52, 51, 48, 55, 49};
 
-	while (*c)
+	/*iterate values in array s*/
+	while (s[c] != '\0')
 	{
-		for (i = 0; i < sizeof(key) / sizeof(char); i++)
+		/**
+		 * loop through array value five times
+		 * to check if the value is equal to
+		 * any small letter in array sl or
+		 * upper letter in array ul and if it
+		 * is replace it with the value in array n
+		*/
+		for (i = 0; i < 5; i++)
 		{
-			if (*c == key[i] || *c == key[i] + 32)
+			if (s[c] == sl[i] || s[c] == ul[i])
 			{
-				*c = 48 + value[i];
+				s[c] = n[i];
+				break;
 			}
 		}
 		c++;
 	}
-
-	return (cp);
+	return (s);
 }
