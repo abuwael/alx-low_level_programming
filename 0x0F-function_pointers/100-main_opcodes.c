@@ -7,7 +7,7 @@
  * @argv: array of arguments
  *
  * Return: Always 0 (Success)
-*/
+ */
 int main(int argc, char *argv[])
 {
 	int bytes, i;
@@ -32,11 +32,11 @@ int main(int argc, char *argv[])
 	for (i = 0; i < bytes; i++)
 	{
 		if (i == bytes - 1)
-																	{
-																		printf("%02hhx\n", arr[i]);
-																		break;
-																	}
-																	printf("%02hhx ", arr[i]);
-																}
+		{
+			printf("%02hhx\n", arr[i]);
+			break;
+		}
+		printf("%02hhx ", arr[i]);
+	}
 	return (0);
 }
